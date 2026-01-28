@@ -323,3 +323,51 @@ section { padding: 100px 10%; }
         font-size: 11px;
     }
 }
+/* --- Portfolio Section Fix --- */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* 2 ya 3 columns banayega */
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.work-card {
+    height: 450px; /* Is se image ki height sahi hogi */
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover karne par card thoda bara hoga */
+.work-card:hover {
+    transform: scale(1.02);
+    border-color: var(--accent);
+}
+
+/* Overlay (Jo image ke upar text hai) */
+.work-card .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 30px;
+    background: linear-gradient(transparent, rgba(15, 23, 42, 0.95)); /* Image ke niche dark effect */
+    transition: 0.5s;
+}
+
+.work-card .overlay h3 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.work-card .overlay p {
+    color: var(--accent);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
