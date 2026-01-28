@@ -270,6 +270,17 @@ html, body {
 
 /* --- MOBILE RESPONSIVE FIX (768px se niche) --- */
 @media (max-width: 768px) {
+    @media (max-width: 768px) {
+    /* Services page aur baaki pages ka pehla section thoda niche karne ke liye */
+    section:first-of-type, .hero {
+        padding-top: 160px !important; /* Navbar ki height ke mutabiq jagah chori gayi hai */
+    }
+
+    /* Agar Capabilities wala section sirf section hai header nahi, to ise target karein */
+    section {
+        padding-top: 100px;
+    }
+}
     /* Navbar ki width aur position set karein */
     .navbar {
         width: 94% !important;
